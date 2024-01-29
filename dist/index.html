@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="icon" type="image/svg+xml" href="https://static.electrocosto.com/images/icons/favicon.ico">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Proyecto 2 usando el DOM de Vite">
+  <meta name="keywords" content="html, css, javascript, dom, Vite, proyecto 2, electrocosto,">
+  <meta name="author" content="David Camuñez">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" crossorigin src="/assets/index-gb_SjWoT.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-555MM7hw.css">
+  <title>Electrocosto</title>
+
+</head>
+
+<body>
+  <header class="menu-costo">
+    <nav>
+      <img class="logoMovil" src="https://the-eshow.com/madrid19/wp-content/uploads/2016/05/electrocosto.jpg"
+        alt="logoMovil">
+      <div class="divLogo">
+        <img class="logo" src="https://static.electrocosto.com/images/icons/logotipo.svg" alt="logo">
+        <h1>Electrocosto, tienda online de electrodomésticos al mejor precio</h1>
+      </div>
+      <div class="searchBar">
+        <input type="search" id="searchInput" placeholder="¿Qué producto buscas?">
+        <img class="magnifyingGlass" src="https://static.electrocosto.com/images/icons/search-icon-home.png"
+          alt="search" class="search">
+      </div>
+      <ul>
+        <li>
+          <a href="">
+            <img class="login" src="https://static.electrocosto.com/images/icons/user.svg" alt="login">
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img class="cart" src="https://static.electrocosto.com/images/icons/menu-cart.svg" alt="">
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+  <main>
+    <aside>
+      <section class="filter">
+        <!-- Primer filtro: Selección de vendedores -->
+        <label for="sellerFilter">Filtrar por Vendedor:</label>
+        <select id="sellerFilter"></select>
+
+        <!-- Segundo filtro: Precio -->
+        <label for="priceFilter">Filtrar por Precio Menor a:</label>
+        <input type="number" id="priceFilter" placeholder="Ingrese precio">
+        <button id="searchBtn">Buscar</button>
+
+        <!-- Botón para limpiar filtros -->
+        <button id="clearFiltersBtn">Limpiar Filtros</button>
+      </section>
+    </aside>
+    <section class="products"></section>
+  </main>
+</body>
+
+</html>
