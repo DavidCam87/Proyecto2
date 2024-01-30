@@ -105,7 +105,6 @@ const paintProducts = (productList) => {
     const productCard = document.createElement('div');
     productCard.classList.add('product-card');
 
-
     productCard.innerHTML = `
         <h3>${product.name}</h3>
         <img class="productImage" src="${product.image}" alt="${product.name}" style="max-width: 100%;">
@@ -119,18 +118,23 @@ const paintProducts = (productList) => {
     productsContainer.appendChild(productCard);
   });
 };
-// Filtrar productos por vendedor
+//! Filtrar productos por vendedor
 sellerFilter.addEventListener('change', function () {
   const selectedSeller = this.value;
   const filteredProducts = products.filter(product => product.seller === selectedSeller);
   paintProducts(filteredProducts);
 });
 
-// Filtrar productos por precio
+//! Filtrar productos por precio
 searchBtn.addEventListener('click', function () {
-  const maxPrice = parseFloat(priceFilter.value);
-  if (!isNaN(maxPrice)) {
-    const filteredProducts = products.filter(product => product.price < maxPrice);
+  const selectedSeller = sellerFilter.value;
+  const maxPrice = priceFilter.value;
+  if (maxPrice || (maxPrice && selectedSeller)) {
+    const filteredProducts = products.filter(product => {
+      const sellerMatch = selectedSeller ? product.seller === selectedSeller : true;
+      const priceMatch = maxPrice ? product.price < maxPrice : true;
+      return sellerMatch && priceMatch;
+    });
     paintProducts(filteredProducts);
   } else {
     alert('Ingrese un número válido en el filtro de precio.');
