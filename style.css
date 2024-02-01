@@ -133,6 +133,8 @@ input, select{
   width: 250px;
   height: 500px;
   text-align: center;
+  transition: 0.3s;
+
 }
 
 .product-card:hover {

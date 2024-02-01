@@ -88,7 +88,7 @@ const products = [
 
 ];
 
-// Iniciamos el filtro de vendedores
+//! Iniciamos el filtro de vendedores
 const uniqueSellers = new Set(products.map(product => product.seller));
 uniqueSellers.forEach(seller => {
   const option = document.createElement('option');
@@ -98,7 +98,7 @@ uniqueSellers.forEach(seller => {
 });
 sellerFilter.value = '';
 
-// Función para pintar productos en la página dinamicamente
+//! Función para pintar productos en la página dinamicamente
 const paintProducts = (productList) => {
   productsContainer.innerHTML = '';
   productList.forEach(product => {
@@ -141,17 +141,17 @@ searchBtn.addEventListener('click', function () {
   }
 });
 
-// Limpiar filtros
+//! Limpiar filtros
 clearFiltersBtn.addEventListener('click', function () {
   sellerFilter.value = '';  // Resetear el filtro de vendedor
   priceFilter.value = '';   // Resetear el filtro de precio
   paintProducts(products); // Mostrar todos los productos
 });
 
-// Mostrar todos los productos al cargar la página
+//! Mostrar todos los productos al cargar la página
 paintProducts(products);
 //------------------------------------------------------------------------------------------------------------------
-//he añadido esta funcion para buscar por texto
+//!he añadido esta funcion para buscar por texto
 const searchFilter = document.querySelector('#searchInput');
 const magnifyingGlass = document.querySelector('.magnifyingGlass');
 
