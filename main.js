@@ -85,6 +85,46 @@ const products = [
     seller: 'HP',
     image: "https://static.electrocosto.com/images/product/medium/49151_hp-15s-fq1051ns.jpg"
   },
+  {
+    name: 'ARISTON FRIGORIFICO AMERICANO E4D B C1 1 NEGRO',
+    price: 1161,
+    stars: 5,
+    reviews: 6,
+    seller: 'ARISTON',
+    image: "https://static.electrocosto.com/images/product/medium/76472_ariston-hotpoint-e4d-b-c1-1-negro.jpg"
+  },
+  {
+    name: 'BEKO B5WFT-59418-W BLANCO - LAVADORA CARGA FRONTAL 9KG 1400RPM',
+    price: 469,
+    stars: 4,
+    reviews: 7,
+    seller: 'BEKO',
+    image: "https://static.electrocosto.com/images/product/regular/67246_.jpg"
+  },
+  {
+    name: 'BEKO GN-1603140-XBN INOX - FRIGORIFICO AMERICANO NO FROST',
+    price: 700,
+    stars: 2,
+    reviews: 13,
+    seller: 'BEKO',
+    image: "https://static.electrocosto.com/images/product/regular/66779_beko-gn-1603140-xbn-inox.jpg"
+  },
+  {
+    name: 'LG 24TQ510S-WZ BLANCO - MONITOR 24" 4K',
+    price: 149,
+    stars: 5,
+    reviews: 10,
+    seller: 'LG',
+    image: "https://static.electrocosto.com/images/product/regular/69025_lg-24tq510s-wz-blanco.jpg"
+  },
+  {
+    name: 'HP DESKJET 3750 Wifi BLANCO - IMPRESORA MULTIFUNCION',
+    price: 49,
+    stars: 3,
+    reviews: 1,
+    seller: 'HP',
+    image: "https://static.electrocosto.com/images/product/regular/53830_hp-deskjet-3750.jpg"
+  }
 
 ];
 
@@ -162,7 +202,3 @@ magnifyingGlass.addEventListener('click', () => {
   searchFilter.value = ''; // Resetear el filtro de busqueda
 
 })
-
-
-
-
