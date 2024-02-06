@@ -159,9 +159,14 @@ const paintProducts = (productList) => {
   });
 };
 //! Filtrar productos por vendedor
-sellerFilter.addEventListener('change', function () {
-  const selectedSeller = this.value;
-  const filteredProducts = products.filter(product => product.seller === selectedSeller);
+sellerFilter.addEventListener('change', function () {       //modificado para que busque por vendedor y por precio y si se
+  const selectedSeller = this.value;                        // cambia el vendedor siga filtrando por precio ese nuevo vendedor
+  const maxPrice = priceFilter.value;
+  const filteredProducts = products.filter(product => {
+    const sellerMatch = selectedSeller ? product.seller === selectedSeller : true;
+    const priceMatch = maxPrice ? product.price < maxPrice : true;
+    return sellerMatch && priceMatch;
+  });
   paintProducts(filteredProducts);
 });
 
@@ -180,6 +185,7 @@ searchBtn.addEventListener('click', function () {
     alert('Ingrese un número válido en el filtro de precio.');
   }
 });
+
 
 //! Limpiar filtros
 clearFiltersBtn.addEventListener('click', function () {
